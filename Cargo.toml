@@ -1,0 +1,15 @@
+[package]
+name = "genpass3"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "A CLI tool to quickly create secure passwords."
+repository = "https://github.com/nico-castell/genpass3"
+documentation = "https://docs.rs/genpass3/latest/"
+homepage = "https://github.com/nico-castell/genpass3"
+keywords = ["password", "security", "cli", "random"]
+categories = ["command-line-utilities"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]

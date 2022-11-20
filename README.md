@@ -45,7 +45,7 @@ Usage:
 
 The LENGTH is an optional parameter specifying the desired length of the password.
 
-Version: 1.0.0, MIT License
+Version: 1.1.0, MIT License
 ```
 
 ## About

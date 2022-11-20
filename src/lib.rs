@@ -16,14 +16,16 @@ use std::{
 
 /// The config for the generation of passwords. Taken as an argument by the [`run`](run) function.
 ///
-/// You can create an instance of this struct using [`Config::build`](Config::build).
+/// You can create an instance of this struct using [`Config::new`](Config::new) or
+/// [`Config::build`](Config::build).
 pub struct Config {
     length: usize,
 }
 
 impl Config {
-    /// Creates a [`Config`](Config) type. **Assumes** the first iteration of `args` is the program
-    /// name, so it's ignores.
+    /// Creates a [`Config`](Config) type using the command line arguments of the binary, passed in
+    /// as arguments. **Assumes** the first iteration of `args` is the program name, so it's
+    /// ignored.
     ///
     /// Parameter:
     /// - `args` - An iterator, meant to iterate over the binary's arguments and flags.
@@ -41,6 +43,15 @@ impl Config {
         };
 
         Ok(Config { length })
+    }
+
+    /// Creates a [`Config`](Config) type. Recommended over [`Config::build`](Config::build) for
+    /// most use cases.
+    ///
+    /// Parameter:
+    /// - `length` - A [`usize`](usize) to act as the length of the password.
+    pub fn new(length: usize) -> Config {
+        Config { length }
     }
 
     /// Prints the configuration options to stderr.

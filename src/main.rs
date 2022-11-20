@@ -25,8 +25,11 @@ fn main() {
     };
 
     // Run the program
-    if let Err(error) = genpass3::run(&config) {
-        eprintln!("\x1B[01;31mApplication error\x1B[00m: {}", error);
-        process::exit(2);
+    match genpass3::run(&config) {
+        Ok(password) => println!("{}", password),
+        Err(error) => {
+            eprintln!("\x1B[01;31mApplication error\x1B[00m: {}", error);
+            process::exit(2);
+        }
     }
 }

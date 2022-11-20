@@ -91,7 +91,7 @@ Version: {}, {} License
 ///
 /// genpass3::run(&config);
 /// ```
-pub fn run(config: &Config) -> Result<(), Box<dyn Error>> {
+pub fn run(config: &Config) -> Result<String, Box<dyn Error>> {
     let mut password = vec![0u8; config.length];
 
     {
@@ -120,7 +120,5 @@ pub fn run(config: &Config) -> Result<(), Box<dyn Error>> {
     // Effectively transforms `Vec<u8>` into `Vec<char>` into `String`.
     let password: String = password.into_iter().map(|c| c as char).collect();
 
-    println!("{}", password);
-
-    Ok(())
+    Ok(password)
 }

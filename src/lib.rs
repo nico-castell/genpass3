@@ -89,7 +89,7 @@ Version: {}, {} License
 ///     Err(error) => panic!("Failed to build `Config`: {}", error),
 /// };
 ///
-/// genpass3::run(config);
+/// genpass3::run(&config);
 /// ```
 pub fn run(config: &Config) -> Result<(), Box<dyn Error>> {
     let mut password = vec![0u8; config.length];

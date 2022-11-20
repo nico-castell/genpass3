@@ -1,10 +1,15 @@
-# CLI Password Generator 4
+# CLI Password Generator 3
 [![Commits since last release](https://img.shields.io/github/commits-since/nico-castell/genpass3/latest?label=Commits%20since%20last%20release&color=informational&logo=Git&logoColor=white&style=flat-square)](https://github.com/nico-castell/genpass3/commits)
 [![Crates version](https://img.shields.io/crates/v/genpass3?color=informational&label=Crate%20version&logo=Rust&logoColor=white&style=flat-square)](https://crates.io/crates/genpass3/versions)
 [![License](https://img.shields.io/github/license/nico-castell/genpass3?label=License&color=informational&logo=Open%20Source%20Initiative&logoColor=white&style=flat-square)](LICENSE)
 [![Tests](https://img.shields.io/github/workflow/status/nico-castell/genpass3/tests?label=tests&logo=GitHub%20Actions&logoColor=white&style=flat-square)](https://github.com/nico-castell/genpass3/actions/workflows/rust-tests.yml)
 
 This program can read `/dev/urandom` to quickly generate random passwords in Linux.
+
+This is a continuation of my saga of password generators. Some of which include
+[genpass2](https://github.com/nico-castell/genpass2),
+[Genpass4Win](https://github.com/nico-castell/Genpass4Win), and
+[Password-Magician](https://github.com/nico-castell/Password-Magician). (Not rust projects)
 
 ## Installation
 To install this application, you will need to have **cargo** from the Rust language. If you don't
